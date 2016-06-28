@@ -7,4 +7,15 @@ class Product < ActiveRecord::Base
 
   validates :price, numericality: {greater_than_or_equal_to: 0.01}
   # numericality() option to verify that the price is a valid number
+
+  # The uniqueness validation will perform a simple check to ensure that no other row
+  # in the products table has the same title as the row we're about to save
+  validates :title, uniqueness: true
+
+  # Validate that the URL entered for the image is valide. "format" option
+  validates :image_url, allow_blank: true, format: {
+    with: %r{\.(git|jpg|png)\Z}i,
+    message: 'must be a URL for GIF, JPG pr PNG image.'
+
+  }
 end
