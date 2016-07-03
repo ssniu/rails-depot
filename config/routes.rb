@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :line_items
+  resources :carts
   # In the text book, it is "Depot::Application.routes.draw do"
   # If you change it to "Rails_depot::Application", the page will have error message
   get "store/index"
