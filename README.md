@@ -4,4 +4,4 @@
 
 * RubyonRails
 
-#### Agile Web Development with Rails 4
+#### Book: Agile Web Development with Rails 4
